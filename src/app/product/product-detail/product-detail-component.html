@@ -1,0 +1,15 @@
+<button class="top-button" [routerLink]="['/']">Go back</button>
+
+<div id="product{{product?.id}}" class="product">
+  <h3>Model: {{product?.title}}</h3>
+  <label>Brand: {{product?.brand}}</label>
+  <p>Category: {{product?.category}}</p>
+  <p>Description: {{product?.description}}</p>
+  <p>Price: {{product?.price}}</p>
+  <p>Discount: {{product?.discountPercentage}}%</p>
+  <p>Rating: {{product?.rating}}</p>
+  <p>Stock available: {{product?.stock}}</p>
+  <div *ngFor="let image of product?.images">
+    <img class="product-photo" src="{{image}}" />
+  </div>
+</div>

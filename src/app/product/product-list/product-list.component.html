@@ -1,0 +1,12 @@
+<h1>Products</h1>
+<section *ngFor='let product of products' class="product">
+  <h2 class="product-heading" [routerLink]="['products', product.id]">{{ product.title }}</h2>
+  <img class="product-photo" src="{{product.thumbnail}}" alt=" {{product.title}}">
+  <p class="product-description">{{ product.description }}</p>
+</section>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
